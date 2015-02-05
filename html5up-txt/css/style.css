@@ -719,7 +719,7 @@
 		background-image:			url('images/overlay.png'),	url('images/overlay.png'),	url('../images/banner.jpg');
 		background-position:		top left,					top left,					center center;
 		background-repeat:			repeat,						repeat,						no-repeat;
-		background-size:			auto,						auto,						cover;
+		background-size:			100%,						auto,						cover;
 		z-index: 1;
 	}
 
@@ -753,11 +753,7 @@
 	#banner
 	{
 		position: relative;
-		background-color:		rgba(21,28,23,0.85);
-		background-image:		url('images/overlay.png'),	url('images/highlight.png');
-		background-position:	top left,					center center;
-		background-size:		auto,						100% 250%;
-		background-repeat:		repeat,						no-repeat;
+
 		text-align: center;
 		margin: 0;
 	}
@@ -765,44 +761,40 @@
 		#banner h2
 		{
 			color: #fff;
+				z-index: 15;
 		}
 		
-		#banner p
-		{
-			display: block;
-			font-family: 'Open Sans Condensed', sans-serif;
-			font-weight: 700;
-			text-transform: uppercase;
-			color: #575d59;
-		}
 
-		#banner .button
-		{
-			color: #b4b7b5;
-			background: transparent !important;
-			border: solid 4px #575d59;
-			border-color: rgba(87, 93, 89, 0.35);
-			border-radius: 16px;
-			-moz-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-			-webkit-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-			-o-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-			-ms-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-			transition: border-color .2s ease-in-out, color .2s ease-in-out;
-		}
 
-			#banner .button:hover
-			{
-				color: #e4e7e5;
-				border-color: rgba(87, 93, 89, 0.75);
+			#slideshow {
+				position:relative;
+				height:450px;
 			}
 
-			#banner .button:active
-			{
-				color: #fff;
-				border-color: rgba(97, 103, 99, 1.0);
+			#slideshow IMG {
+				position:absolute;
+				top:0;
+				left:0;
+				z-index:-9;
+				opacity:0.0;
 			}
 
+			#slideshow IMG.active {
+				z-index:-7;
+				opacity:1.0;
+			}
 
+			#slideshow IMG.last-active {
+				z-index:-8;
+			}
+				#slideshow h2
+		{
+			color: #fff;
+				z-index: 10;
+		}
+
+			
+			
 /*********************************************************************************/
 /* Main                                                                          */
 /*********************************************************************************/
