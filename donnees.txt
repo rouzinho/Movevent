@@ -1,0 +1,69 @@
+			=== STRUCTURE DE LA BASE ===
+
+
+Covoiturage (#id_covoiturage, #id_event, #id_user, villeDepart, villeArrivee, prix, nbPlace,description)
+Couchsurfing (#id_couchsurfing, #id_user, #id_event, date, nbplace)
+Utilisateur (#id_user, login, password, #id_info, #id_service)
+UtilisateurInfo (#id_info, prenom, nom, age, mail, adresse, ville)
+UtilisateurService (#id_service, covoiture, voiture, modele, type , nbPlace, fumeur, animaux, bagages, heberge, interet, description)
+Messagerie (#id_message, #id_user_origine,#id_user_destinataire, date, message)
+Evenement (#id_event, nom, thème, lieu, ville, dateDebut, dateFin, description)
+
+
+			=== REQUETES : ===
+
+			
+	== AJOUT MESSAGE ==
+
+INSERT INTO `movevent`.`messagerie` (`id_message`, `id_user_origine`, `id_user_destination`, `date`, `message`) VALUES (NULL, '2', '5', '2015-01-01', 'J''aimerais profiter de votre offre de covoiturage pour le trajet paris-strasbourg le 10 Avril.');
+
+
+	== AJOUT EVENEMENT ==
+ 
+INSERT INTO `movevent`.`evenement` (`id_event`, `nom`, `theme`, `lieu`, `ville`, `datedebut`, `datefin`, `description`) VALUES (NULL, 'marche de noel', 'marche', 'place kleber', 'strasbourg', '2014-12-05', '2015-01-27', 'marché de noel typique de l''Alsace');
+ 
+ 
+	== AJOUT COVOIT ==
+  
+INSERT INTO `movevent`.`couchsurfing` (`id_couchsurfing`, `id_user`, `id_event`, `date`, `nbplace`) VALUES (NULL, '1', '1', '2015-01-06', '2');
+
+
+	== AJOUT UTILISATEUR ==
+	
+INSERT INTO `movevent`.`utilisateurinfo` (`id_info`, `prenom`, `nom`, `age`, `mail`, `adresse`, `ville`) VALUES (NULL, 'john', 'doe', '27', 'doe@localhost', '007 rue du fantome', 'paris');
+
+	//QUI PROPOSE DU COUCHSURFING UNIQUEMENT (sinon ce serait pas a nul mais à 0 ou 1 selon les modalites)
+
+INSERT INTO `movevent`.`utilisateurservice` (`id_service`, `covoiture`, `voiture`, `modele`, `type`, `nbplace`, `fumeur`, `animaux`, `bagages`, `heberge`, `interet`, `description`) VALUES (NULL, '1', 'renault', 'twingo', 'citadine', NULL, NULL, NULL, NULL, '0', NULL, NULL);
+
+INSERT INTO `movevent`.`utilisateur` (`id_user`, `login`, `password`, `id_info`, `id_service`) VALUES (NULL, 'johnD', 'johnD', '6', '6');
+
+
+				=== RECHERCHER ===
+
+EVENEMENT : 
+	SELECT * FROM evenement WHERE nom = "Festival Artefact"
+	
+EVENEMENT par theme : 
+	SELECT * FROM evenement WHERE theme = "festival"
+				
+EVENEMENT PAR VILLE : 
+	SELECT * FROM evenement WHERE ville = "strasbourg"
+	
+TOUT LES EVENEMENTS ordonnée par ville : 
+	SELECT * FROM evenement ORDER BY ville asc
+	
+TOUT LES COIVOTURAGE POUR UN FESTIVAL DONNE
+	SELECT covoiturage.date, covoiturage.villedepart, covoiturage.villearrivee FROM evenement,covoiturage WHERE covoiturage.id_event = evenement.id_event AND nom = "Festival Artefact" ORDER BY covoiturage.villedepart asc
+
+TOUT LES COUCHSURFING POUR UN FESTIVAL DONNE
+	SELECT * FROM evenement,couchsurfing WHERE couchsurfing.id_event = evenement.id_event AND nom = 'Festival hip-op'
+	
+PERSONNE PAR INTERET 
+	SELECT prenom,nom,ville,interet
+	FROM utilisateurservice, utilisateurinfo, utilisateur
+	WHERE utilisateur.id_info = utilisateurinfo.id_info AND utilisateur.id_service = utilisateurservice.id_service AND interet LIKE '%musique%'
+	
+
+
+
