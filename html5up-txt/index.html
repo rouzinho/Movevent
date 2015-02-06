@@ -16,6 +16,7 @@
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
+			<link rel="stylesheet" href="css/popup.css" />
 		</noscript>
 
 		
@@ -51,16 +52,35 @@
 	<body class="homepage">
 
 		<!-- Header -->
-		<!-- Bouton de connexion -->
-		<div id="headerButton"
-			<a href="#" class="button">Connexion</a>
+		<!-- Bouton de connexion + pop up -->
+		<div id="headerButton">
+			<label class="button" for="modalCheck">Connexion</label>
+			<input type="checkbox" id="modalCheck" />
+			<div class="modalLayer">
+				<div class="popup_block">
+					<label for="modalCheck"><img alt="Fermer" title="Fermer la fenêtre" class="btn_close" src="images/close_pop.png"></label>
+					<img style="float: right; margin: 0 0 0 20px;" alt="bulle" src="images/bulle5.png">
+					<h2>Popup #2</h2>
+				
+					<p>Aliquip transverbero loquor esse ille vulputate exerci veniam fatua eros similis illum valde. Praesent, venio conventio rusticus antehabeo lenis. Melior pertineo feugait, praesent hos rusticus et haero facilisis abluo. </p>
+					<p>Veniam tincidunt augue abluo vero, augue nisl melior quidem secundum nobis singularis eum eum.</p>
+					
+				</div>
+			</div>
 		</div>
+			
+			
+			
+			
+			
+
 
 			<!-- fond du header-->
 			<header id="header">
 				<div class="logo container">
 				</div>
 			</header>
+
 
 
 		
