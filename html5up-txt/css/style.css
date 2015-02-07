@@ -4,6 +4,10 @@
 
 
 
+	
+		
+
+
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
@@ -255,7 +259,7 @@
 			input[type="reset"]:hover,
 			.button:hover
 			{
-				background: #81B000;
+				background: #b9d2ce;
 			}
 
 			input[type="button"]:active,
@@ -427,9 +431,9 @@
 				{
 					display: block;
 					position: relative;
-					background: #c1cac5;
-					width: 12em;
-					height: 12em;
+					background: #ff707d;
+					width: 11em;
+					height: 11em;
 					border-radius: 6em;
 					outline: 0;
 					-moz-transition: background-color .2s ease-in-out;
@@ -726,7 +730,7 @@
 	#main-wrapper
 	{
 		background: #fff;
-		border-top: solid 5px #b1ddab;
+		border-top: solid 3px #aefe47;
 		border-bottom: solid 5px #c1cac5;
 	}
 	
@@ -745,6 +749,42 @@
 		float: right;
 	}
 
+	
+		#modalCheck{
+			display: none;
+
+		}
+		.modalLayer{
+			display: none;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 10;
+		}
+		#modalCheck:checked + .modalLayer, #modalContent:target{
+			display: block;
+		}
+		.popup_block{
+			background: #fff;
+			padding: 20px;
+			border: 15px solid #ddd;
+			position: relative;
+			margin: 10% auto;
+			width: 40%;
+			box-shadow: 0px 0px 20px #000;
+			border-radius: 10px;
+			z-index: 99;
+		}
+		img.btn_close {
+			float: right;
+			margin: -55px -55px 0 0;
+			cursor: pointer;
+		}
+
+	
 
 /*********************************************************************************/
 /* Banner                                                                        */
@@ -752,8 +792,11 @@
 
 	#banner
 	{
-		position: relative;
-
+		background-color:		rgba(21,28,23,0.10);
+		background-image:		url('images/overlay.png'),	url('images/highlight.png');
+		background-position:	top left,					center center;
+		background-size:		100%,						100% 100%;
+		background-repeat:		repeat,						no-repeat;
 		text-align: center;
 		margin: 0;
 	}
@@ -761,14 +804,12 @@
 		#banner h2
 		{
 			color: #fff;
-				z-index: 15;
+			z-index: 15;
 		}
 		
-
-
 			#slideshow {
 				position:relative;
-				height:450px;
+				height:350px;
 			}
 
 			#slideshow IMG {
