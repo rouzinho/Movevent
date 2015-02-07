@@ -12,6 +12,10 @@
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
 		<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+		<!-- carte -->
+		<script src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.7"></script>
+		<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+		<script src="js/maplace.min.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -135,102 +139,60 @@
 
 						</div>
 					</div>
-					
-					<div class="row 200%">
-						<div class="12u">
-
-							<!-- Blog -->
-								<section class="box blog">
-									<h2 class="major"><span>Evènement à la carte</span></h2>
+													<section class="box blog">
+									<h2 class="major"><span>Evénement à la carte</span></h2>
 									<div>
 										<div class="row">
 											<div class="9u">
 												<div class="content content-left">
-												
-													<!-- Featured Post -->
-														<article class="box post">
-															<header>
-																<h3><a href="#">Here's a really big heading</a></h3>
-																<p>With a smaller subtitle that attempts to elaborate</p>
-																<ul class="meta">
-																	<li class="icon fa-clock-o">15 minutes ago</li>
-																	<li class="icon fa-comments"><a href="#">8</a></li>
-																</ul>
-															</header>
-															<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-															<p>
-																Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in lectus. Praesent 
-																semper mod quis eget mi. Etiam sed ante risus aliquam erat et volutpat. Praesent a 
-																dapibus velit. Curabitur sed nisi nunc, accumsan vestibulum lectus. Lorem ipsum 
-																dolor sit non aliquet sed, tempor et dolor.  Praesent a dapibus velit. Curabitur 
-																accumsan.
-															</p>
-															<a href="#" class="button">Continue Reading</a>
+													<div id="gmap-menu"style=" height: 500px; width: 800px; "></div>
+
+
+													<script type="text/javascript">
+																var LocsA = [
+														{
+																lat: 45.9,
+																lon: 10.9,
+																title: 'Title A1',
+																html: '<h3>Content A1</h3>',
+																icon: 'http://maps.google.com/mapfiles/markerA.png'
+														},
+														{
+														lat: 44.8,
+														lon: 1.7,
+														title: 'Title B1',
+														html: '<h3>Content B1</h3>',
+														icon: 'http://maps.google.com/mapfiles/markerB.png',
+														show_infowindow: false
+														},
+														];
+																	$(function() {
+																			new Maplace({
+																				locations: LocsA
+																				,
+																				map_div: '#gmap-menu',
+																				controls_type: 'list',
+																				controls_on_map: false
+																			}).Load(); 
+																	});
+													</script>
+
+													<br>
+															<a href="#" class="button">Recherche</a>
 														</article>
 												
 												</div>
 											</div>
 											<div class="3u">
 												<div class="sidebar">
-											
-													<!-- Archives -->
-														<ul class="divided">
-															<li>
-																<article class="box post-summary">
-																	<h3><a href="#">A Subheading</a></h3>
-																	<ul class="meta">
-																		<li class="icon fa-clock-o">6 hours ago</li>
-																		<li class="icon fa-comments"><a href="#">34</a></li>
-																	</ul>
-																</article>
-															</li>
-															<li>
-																<article class="box post-summary">
-																	<h3><a href="#">Another Subheading</a></h3>
-																	<ul class="meta">
-																		<li class="icon fa-clock-o">9 hours ago</li>
-																		<li class="icon fa-comments"><a href="#">27</a></li>
-																	</ul>
-																</article>
-															</li>
-															<li>
-																<article class="box post-summary">
-																	<h3><a href="#">And Another</a></h3>
-																	<ul class="meta">
-																		<li class="icon fa-clock-o">Yesterday</li>
-																		<li class="icon fa-comments"><a href="#">184</a></li>
-																	</ul>
-																</article>
-															</li>
-															<li>
-																<article class="box post-summary">
-																	<h3><a href="#">And Another</a></h3>
-																	<ul class="meta">
-																		<li class="icon fa-clock-o">2 days ago</li>
-																		<li class="icon fa-comments"><a href="#">286</a></li>
-																	</ul>
-																</article>
-															</li>
-															<li>
-																<article class="box post-summary">
-																	<h3><a href="#">And One More</a></h3>
-																	<ul class="meta">
-																		<li class="icon fa-clock-o">3 days ago</li>
-																		<li class="icon fa-comments"><a href="#">8,086</a></li>
-																	</ul>
-																</article>
-															</li>
-														</ul>
-														<a href="#" class="button alt">Browse Archives</a>
+													<div id="controls"></div>
 												
 												</div>
 											</div>
 										</div>
 									</div>
 								</section>
-							
-						</div>
-					</div>
+				
 					
 					<div class="row 200%">
 						<div class="12u">
