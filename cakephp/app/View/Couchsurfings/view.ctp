@@ -1,3 +1,4 @@
+<?php print_r($couchsurfing); ?>
 <div class="couchsurfings view">
 <h2><?php echo __('Couchsurfing'); ?></h2>
 	<dl>
