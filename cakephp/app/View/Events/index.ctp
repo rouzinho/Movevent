@@ -8,7 +8,7 @@
 	
 		<section>
 			<ul class="meta" style="font-size:30px;">
-				<li> <?php    echo $this->Html->link(__($event['Event']['name']), array('controller' => 'users', 'action' => 'view'));  ?> </li>                  
+				<li> <?php    echo $this->Html->link(__($event['Event']['name']), array('controller' => 'events', 'action' => 'view',$event['Event']['id']));  ?> </li>                  
 				<li><?php echo h($event['Event']['theme']); ?> </li>
 				<li class="icon fa-clock-o" style="font-size:20px;"  align="rigth"  > <?php echo h($event['Event']['start_time']); ?>  -- --  <?php echo h($event['Event']['end_time']); ?>
 				</li>						 

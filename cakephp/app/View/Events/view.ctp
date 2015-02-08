@@ -43,19 +43,9 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Event'), array('action' => 'edit', $event['Event']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Event'), array('action' => 'delete', $event['Event']['id']), array(), __('Are you sure you want to delete # %s?', $event['Event']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Events'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Event'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Carpools'), array('controller' => 'carpools', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Carpool'), array('controller' => 'carpools', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Couchsurfings'), array('controller' => 'couchsurfings', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Couchsurfing'), array('controller' => 'couchsurfings', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+
+<!--
+
 <div class="related">
 	<h3><?php echo __('Related Carpools'); ?></h3>
 	<?php if (!empty($event['Carpool'])): ?>
@@ -134,3 +124,4 @@
 		</ul>
 	</div>
 </div>
+-->
