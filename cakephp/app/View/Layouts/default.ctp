@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 
 <html>
@@ -12,10 +13,6 @@
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
 		<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
-		<!-- carte -->
-		<script src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.7"></script>
-		<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
-		<script src="js/maplace.min.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -107,9 +104,6 @@
 					<div id="slideshow">
 					
 						<img src="images/image1.jpg" style="width:100%;height:100%" alt="Slideshow Image 1" class="active" />
-						<img src="images/image1.jpg" style="width:100%;height:100%" alt="Slideshow Image 1"  />
-						<img src="images/image2.jpg" style="width:100%;height:100%" alt="Slideshow Image 1" />
-						<img src="images/image33.jpg" style="width:100%;height:100%"  alt="Slideshow Image 3" />
 						<img src="images/image2.jpg" style="width:100%;height:100%"  alt="Slideshow Image 2" />
 						<img src="images/image3.jpg" style="width:100%;height:100%"  alt="Slideshow Image 3" />
 						<img src="images/image4.jpg" style="width:100%;height:100%"  alt="Slideshow Image 2" />
@@ -130,176 +124,13 @@
 		<!-- Main -->
 			<div id="main-wrapper">
 				<div id="main" class="container">
-					<div class="row 50%">
-						<div class="12u">
-							
-							<!-- Highlight -->
-								<section class="box highlight">
-									<ul class="special">
-										<li><a href="#" class="icon fa-bed "><span class="label">bed</span></a></li>
-										<li><a href="#" class="icon fa-car"><span class="label">car</span></a></li>
-										<li><a href="#" class="icon fa-child"><span class="label">child</span></a></li>
-										<li><a href="#" class="icon fa-users"><span class="label">users</span></a></li>
-									</ul>
 
 
-								</section>
+			<?php echo $this->Session->flash(); ?>
 
-						</div>
-					</div>
-													<section class="box blog">
-									<h2 class="major"><span>Evénement à la carte</span></h2>
-									<div>
-										<div class="row">
-											<div class="9u">
-												<div class="content content-left">
-													<div id="gmap-menu"style=" height: 500px; width: 800px; "></div>
-
-
-													<script type="text/javascript">
-																var LocsA = [
-														{
-																lat: 48.58,
-																lon: 7.75,
-																title: 'Marché de Noël de Strasbourg',
-																html: 'Différents marché de Noël dans toute la ville de Strasbourg au mois de décembre',
-																icon: 'http://maps.google.com/mapfiles/markerA.png'
-														},
-														{
-														lat: 48.86,
-														lon: 2.33,
-														title: 'Festival Solidays à Paris',
-														html: 'Le festival solidaire Solidays à Paris à la fin du mois de juin',
-														icon: 'http://maps.google.com/mapfiles/markerB.png',
-														},
-														{
-														lat: 45.75,
-														lon: 4.85,
-														title: 'Fête des lumières de Lyon',
-														html: 'Fête des lumières dans toute la ville de lyon le premier week-end de décembre',
-														icon: 'http://maps.google.com/mapfiles/markerC.png',
-														},
-														{
-														lat: 45.65,
-														lon: 0.16,
-														title: 'Festival de la BD à Angoulème',
-														html: 'Festival international de la BD à Angoulème le 30 et 31 janvier',
-														icon: 'http://maps.google.com/mapfiles/markerD.png',
-														},
-														];
-																	$(function() {
-																			new Maplace({
-																				locations: LocsA
-																				,
-																				map_div: '#gmap-menu',
-																				controls_type: 'list',
-																				controls_on_map: false
-																			}).Load(); 
-																	});
-													</script>
-
-													<br> <center>
-															
-															<a href="creation_event.html" class="button big">Créer un événement</a></center>
-														</article>
-												
-												</div>
-											</div>
-											<div class="3u">
-												<div class="sidebar">
-													<div id="controls"></div>
-													<br>
-													<br>
-												<a href="#" class="button big">Recherche</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</section>
-				
-					
-					<div class="row 200%">
-						<div class="12u">
-
-							<!-- Features -->
-								<section class="box features">
-									<h2 class="major"><span>événements à l'affiche</span></h2>
-									<div>
-										<div class="row">
-											<div class="3u">
-												
-												<!-- Feature -->
-													<section class="box feature">
-														<a href="#" class="image info"><img src="images/eventWeather.png" alt="" /></a>
-														<h3><a href="#">WEATHER WINTER</a></h3>
-														<p>
-															NUITS SONORES 2015 <br>
-															Festival-Electro
-														</p>
-													</section>
-										
-											</div>
-											<div class="3u">
-												
-												<!-- Feature -->
-													<section class="box feature">
-														<a href="#" class="image info"><img src="images/eventNuits.png"  alt="" /></a>
-														<h3><a href="#">NUITS SONORES 2015</a></h3>
-														<p>
-															 
-															Festival-Electro <br>
-															Rhône-Alpes<br>
-															Du 13/05/2015 au  17/05/2015
-														</p>
-													</section>
-										
-											</div>
-											<div class="3u">
-												
-												<!-- Feature -->
-													<section class="box feature">
-														<a href="#" class="image info"><img src="images/pic03.jpg" alt="" /></a>
-														<h3><a href="#">And Another</a></h3>
-														<p>
-															Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in 
-															lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
-														</p>
-													</section>
-										
-											</div>
-											<div class="3u">
-												
-												<!-- Feature -->
-													<section class="box feature">
-														<a href="#" class="image info"><img src="images/pic04.jpg" alt="" /></a>
-														<h3><a href="#">And One More</a></h3>
-														<p>
-															Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in 
-															lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
-														</p>
-													</section>
-										
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<ul class="actions">
-													<a href="creation_event.html" class="button big">Créer un événement</a>
-													
-												</ul>
-											</div>
-										</div>
-									</div>
-								</section>
-
-						</div>
-					</div>
-					
-					
-					
+			<?php echo $this->fetch('content'); ?>
 				</div>
 			</div>
-
 		<!-- Footer -->
 			<footer id="footer" class="container">
 				<div class="row 200%">
