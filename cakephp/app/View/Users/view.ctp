@@ -9,86 +9,51 @@
 
 					<div class="users view">
 
-						<table border="1">
-							<tr>
-								<td>
-									<h2><?php echo h($user['User']['login']); ?>&nbsp;</h2>
-								</td>
-								<td rowspan="3"><img src="../../app/webroot/images/profil.jpg" alt="profil" style="width:64px; height:64px;" /> </td>
-								<td>
-								</td>
-								<td>
-									<h1><?php echo h($user['User']['car']); ?>&nbsp;</h1>
-									
-								</td>
-								<td>
-									<h1><?php echo h($user['User']['model']); ?>&nbsp;</h1>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<h2><?php echo h($user['User']['age']); ?>&nbsp;ans</h2>
-								</td>
-								<td>
-								</td>
-								<td>
-									<h1><?php echo h($user['User']['type']); ?>&nbsp;</h1>
-								</td>
-								<td>
-									<?php
-										if($user['User']['num_place'] > 0){
-											echo "<h1 class='icon fa-child'  style='font-size:20px; text-align:left;' > ".h($user['User']['num_place'])." places</h1>";
-										}
-									?>
-								
-									</li>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<h2><?php echo h($user['User']['city']); ?>&nbsp;</h2>
-								</td>
-								<td>
-								</td>
-								<td>
-									<?php
-										if($user['User']['smoker'] == 1){
-											echo "<h1 class='fa fa-soundcloud'  style='font-size:20px; text-align:left;' >&nbsp;</h1>";
-										}
-									?>			
-								</td>
-								<td>
-									<?php
-										if($user['User']['animal'] == 1){
-											echo "<h1 class='fa fa-github-alt'  style='font-size:20px; text-align:left;' >&nbsp;</h1>";
-										}
-									?>
-									
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<?php 
-										if($user['User']['lodge'] == 1){
-											echo "<h1 class='icon fa-bed'  style='font-size:30px; text-align:left;' ></h1>";
-										}
-									?>
-								</td>
-								<td>
-								</td>
-								<td>
-								</td>
-								<td>
-								</td>
-								<td>
-									
-								</td>
-							</tr>
-							<tr>
-								<td rowspan="4"><?php echo h($user['User']['description']); ?>&nbsp;
-								</td>
-							</tr>
+						<article class="box page-content">
 
+										<header>
+										<img  src="../../app/webroot/images/profil.jpg" alt="profil" style="width:100px; height:100px; float:right;" />
+											<h2><?php echo h($user['User']['login']); ?>&nbsp;</h2>
+											<h3><?php echo h($user['User']['age']); ?>&nbsp;ans</h3>
+											<h3><?php echo h($user['User']['city']); ?>&nbsp;</h3>
+										</header>
+
+									
+										<h2 class="major"><span></span></h2>
+										<section>
+											<h3 style="font-size:30px">Covoiturage </h3>
+											<h1>Marque :          <?php echo h($user['User']['car']); ?>&nbsp;</h1>
+											<h1>Modèle  :          <?php echo h($user['User']['model']); ?>&nbsp;</h1>
+											<h1>Catégorie  :         <?php echo h($user['User']['type']); ?>&nbsp;</h1>
+											<?php
+												if($user['User']['num_place'] > 0){
+													echo "<h1 class='icon fa-child'  style='font-size:20px; text-align:left;' > ".h($user['User']['num_place'])." places</h1>";
+												}
+											?>
+											<?php
+												if($user['User']['smoker'] == 1){
+													echo "<h1 class='fa fa-soundcloud'  style='font-size:20px; text-align:left;' >&nbsp;</h1>";
+												}
+											?>	
+											<?php
+													if($user['User']['animal'] == 1){
+														echo "<h1 class='fa fa-github-alt'  style='font-size:20px; text-align:left;' >&nbsp;</h1>";
+													}
+											?>
+										</section>
+										<h2 class="major"><span></span></h2>
+										<section>
+											<h3>Couchsurfing</h3>
+											<?php 
+												if($user['User']['lodge'] == 1){
+													echo "<h1 class='icon fa-bed'   >  loge des personnes</h1>";
+												}
+											?>
+											<p rowspan="4"><?php echo h($user['User']['description']); ?>&nbsp;</p>
+										</section>
+
+									</article>
+							<h2 class="major"><span> </span></h2>
 						</table>
 					</div>
 				</article>
