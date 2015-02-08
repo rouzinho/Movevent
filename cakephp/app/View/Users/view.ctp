@@ -37,7 +37,7 @@
 								<td>
 									<?php
 										if($user['User']['num_place'] > 0){
-											echo "<h1 class='icon fa-child'  style='font-size:20px; text-align:left;' > ".h($user['User']['num_place'])."places</h1>";
+											echo "<h1 class='icon fa-child'  style='font-size:20px; text-align:left;' > ".h($user['User']['num_place'])." places</h1>";
 										}
 									?>
 								

@@ -9,7 +9,10 @@
 	<?php echo $this->Html->css(array('skel','style','style-desktop'));?>
 	<?php echo $this->Html->script(array('jquery.min','jquery.dropotron.min','skel.min','skel-layers.min','init'));?>
 	<body>
-
+		<div id="headerButton">
+				<label class="button" for="modalCheck">Deconnexion</label>
+				<?php echo $this->Html->link(__('Modifier profil'), array('controller' => 'users', 'action' => 'edit',$user['User']['id'])); ?>
+			</div>
 		<!-- Header -->
 			<header id="header">
 				<div class="logo container">
@@ -19,10 +22,7 @@
 				</div>
 			</header>
 			
-			<div id="headerButton">
-				<label class="button" for="modalCheck">Deconnexion</label>
-				<?php echo $this->Html->link(__('Modifier profil'), array('controller' => 'users', 'action' => 'edit(1)')); ?>
-			</div>
+			
 		</div>
 
 

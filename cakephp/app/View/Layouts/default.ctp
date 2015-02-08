@@ -79,7 +79,7 @@
 
 					 
 
-					<a href="#" class="button">Connexion</a>
+					<a href="./" class="button">Connexion</a>
 					<?php echo $this->Html->link(__('Inscription'), array('controller' => 'users', 'action' => 'add')); ?>   
 					</center>
 				</div>

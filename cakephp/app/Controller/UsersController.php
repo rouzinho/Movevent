@@ -43,7 +43,7 @@ class UsersController extends AppController {
  * @return void
  */
 	public function view($id = null) {
-		$this->layout="headerfooterwithoutconnect"; 
+		$this->layout="headerfooterwithconnect"; 
 		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Invalid user'));
 		}
@@ -63,7 +63,7 @@ class UsersController extends AppController {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
 				$this->Session->setFlash(__('The user has been saved.'));
-				return $this->redirect(array('action' => 'profil'));
+				return $this->redirect((array('action' => 'view', $this->User->primaryKey)));
 			} else {
 				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
 			}

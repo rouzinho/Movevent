@@ -1,7 +1,7 @@
 <div class="users form">
 <?php echo $this->Html->css(array('skel','style','style-desktop'));?>
 <?php echo $this->Form->create('User'); ?>
-	<h2>Création d'un compte utilisateur</h2>
+	<h2>CrÃ©ation d'un compte utilisateur</h2>
 	<?php
 		echo $this->Form->input('login');
 		echo $this->Form->input('password');
