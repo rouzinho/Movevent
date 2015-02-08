@@ -9,7 +9,7 @@
 										<li><a href="./couchsurfings" class="icon fa-bed "><span class="label">bed</span></a></li>
 										<li><a href="./carpools" class="icon fa-car"><span class="label">car</span></a></li>
 										<li><a href="#" class="icon fa-child"><span class="label">child</span></a></li>
-										<li><a href="#" class="icon fa-users"><span class="label">users</span></a></li>
+										<li><a href="./users" class="icon fa-users"><span class="label">users</span></a></li>
 									</ul>
 
 

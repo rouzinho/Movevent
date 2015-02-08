@@ -1,6 +1,6 @@
 
 <div class="carpools index">
-	<h2><?php echo __('Liste des carpools'); ?></h2>
+	<h2><?php echo __('Liste des covoiturages'); ?></h2>
 	
 	<?php foreach ($carpools as $carpool): ?>
 		<section>
