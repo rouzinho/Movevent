@@ -89,7 +89,7 @@
 													<div id="controls"></div>
 													<br>
 													<br>
-												<a href="#" class="button big">Recherche</a>
+												<a href="./Events" class="button big">Recherche</a>
 												</div>
 											</div>
 									</div>
