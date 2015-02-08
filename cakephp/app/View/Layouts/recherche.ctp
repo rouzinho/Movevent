@@ -26,19 +26,8 @@
 					<div class="row">
 						<div class="12u">
 							<div class="content">
-							
-										<header>
-											<h2>Résultat de la recherche</h2>
-										</header>
-										<section>
-											 <ul class="meta" style="font-size:30px;">
-											 <li>Nom  </li>                  <li>   Type d'évènement </li>
-											 <li class="icon fa-clock-o" style="font-size:20px;"  align="rigth"  > date debut  -- --  date fin</li>
-											 <li class="icon fa-university"  style="font-size:20px; text-align:center;" >   lieu des festivités </li> 
-											 </ul>
-											<?php echo $this->Session->flash(); ?>
+										<?php echo $this->Session->flash(); ?>
 											<?php echo $this->fetch('content'); ?>
-										</section>
 										<center><a align="rigth" style="margin:40px;" href="index.html" class="button big" >Retour</a> </center>
 							</div>
 						</div>

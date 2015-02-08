@@ -1,17 +1,21 @@
 <div class="events index">
 	<table cellpadding="0" cellspacing="0">
 	<tbody>
+		<header>
+			<h2>Résultat de la recherche</h2>
+		</header>
 	<?php foreach ($events as $event): ?>
-	<tr>
-		<td><?php echo h($event['Event']['id']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['name']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['theme']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['place']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['city']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['start_time']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['end_time']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['description']); ?>&nbsp;</td>
-	</tr>
+	
+		<section>
+			<ul class="meta" style="font-size:30px;">
+				<li> <?php echo h($event['Event']['name']); ?> </li>                  
+				<li><?php echo h($event['Event']['theme']); ?> </li>
+				<li class="icon fa-clock-o" style="font-size:20px;"  align="rigth"  > <?php echo h($event['Event']['start_time']); ?>  -- --  <?php echo h($event['Event']['end_time']); ?>
+				</li>						 
+				<li class="icon fa-university"  style="font-size:20px; text-align:center;" >   <?php echo h($event['Event']['city']); ?> </li> 
+			</ul>
+		</section>
+	
 <?php endforeach; ?>
 	</tbody>
 	</table>
