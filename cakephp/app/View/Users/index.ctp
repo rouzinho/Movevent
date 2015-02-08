@@ -6,8 +6,23 @@
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('login'); ?></th>
 			<th><?php echo $this->Paginator->sort('password'); ?></th>
-			<th><?php echo $this->Paginator->sort('information_user_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('service_user_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('first_name'); ?></th>
+			<th><?php echo $this->Paginator->sort('last_name'); ?></th>
+			<th><?php echo $this->Paginator->sort('age'); ?></th>
+			<th><?php echo $this->Paginator->sort('mail'); ?></th>
+			<th><?php echo $this->Paginator->sort('adress'); ?></th>
+			<th><?php echo $this->Paginator->sort('city'); ?></th>
+			<th><?php echo $this->Paginator->sort('carpool'); ?></th>
+			<th><?php echo $this->Paginator->sort('car'); ?></th>
+			<th><?php echo $this->Paginator->sort('model'); ?></th>
+			<th><?php echo $this->Paginator->sort('type'); ?></th>
+			<th><?php echo $this->Paginator->sort('num_place'); ?></th>
+			<th><?php echo $this->Paginator->sort('smoker'); ?></th>
+			<th><?php echo $this->Paginator->sort('animal'); ?></th>
+			<th><?php echo $this->Paginator->sort('baggage'); ?></th>
+			<th><?php echo $this->Paginator->sort('lodge'); ?></th>
+			<th><?php echo $this->Paginator->sort('interest'); ?></th>
+			<th><?php echo $this->Paginator->sort('description'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -17,12 +32,23 @@
 		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['login']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['password']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($user['InformationUser']['id'], array('controller' => 'information_users', 'action' => 'view', $user['InformationUser']['id'])); ?>
-		</td>
-		<td>
-			<?php echo $this->Html->link($user['ServiceUser']['id'], array('controller' => 'service_users', 'action' => 'view', $user['ServiceUser']['id'])); ?>
-		</td>
+		<td><?php echo h($user['User']['first_name']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['last_name']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['age']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['mail']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['adress']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['city']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['carpool']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['car']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['model']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['type']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['num_place']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['smoker']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['animal']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['baggage']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['lodge']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['interest']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['description']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>
@@ -50,13 +76,5 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Information Users'), array('controller' => 'information_users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Information User'), array('controller' => 'information_users', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Service Users'), array('controller' => 'service_users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Service User'), array('controller' => 'service_users', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Carpools'), array('controller' => 'carpools', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Carpool'), array('controller' => 'carpools', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Couchsurfings'), array('controller' => 'couchsurfings', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Couchsurfing'), array('controller' => 'couchsurfings', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

@@ -55,9 +55,6 @@ class UsersController extends AppController {
 				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
 			}
 		}
-		$informationUsers = $this->User->InformationUser->find('list');
-		$serviceUsers = $this->User->ServiceUser->find('list');
-		$this->set(compact('informationUsers', 'serviceUsers'));
 	}
 
 /**
@@ -82,9 +79,6 @@ class UsersController extends AppController {
 			$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
 			$this->request->data = $this->User->find('first', $options);
 		}
-		$informationUsers = $this->User->InformationUser->find('list');
-		$serviceUsers = $this->User->ServiceUser->find('list');
-		$this->set(compact('informationUsers', 'serviceUsers'));
 	}
 
 /**
