@@ -21,6 +21,7 @@ class EventsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->layout="recherche";
 		$this->Event->recursive = 0;
 		$this->set('events', $this->Paginator->paginate());
 	}
