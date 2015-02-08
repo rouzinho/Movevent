@@ -1,4 +1,5 @@
 <div class="users form">
+<?php echo $this->Html->css('user'); ?>
 <?php echo $this->Form->create('User'); ?>
 	<fieldset>
 		<legend><?php echo __('Add User'); ?></legend>

@@ -74,7 +74,11 @@
 					</div>
 					
 					<br>
+<<<<<<< HEAD
 					<?php echo $this->Html->link(__('Inscription'), array('controller' => 'users', 'action' => 'add')); ?>    
+=======
+					<?php echo $this->Html->link(__('Inscription'), array('controller' => 'users', 'action' => 'add')); ?>  
+>>>>>>> parent of 4f7d5eb... MAJ page d'accueil
 					<a href="#" class="button">Connexion</a>
 					</center>
 				</div>

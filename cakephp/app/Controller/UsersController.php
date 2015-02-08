@@ -34,7 +34,6 @@ class UsersController extends AppController {
  * @return void
  */
 	public function view($id = null) {
-		//$this->layout="userTask"; 
 		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Invalid user'));
 		}
