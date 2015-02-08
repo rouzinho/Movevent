@@ -21,6 +21,7 @@ class UsersController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->layout="userTask"; 
 		$this->User->recursive = 0;
 		$this->set('users', $this->Paginator->paginate());
 	}
@@ -33,11 +34,13 @@ class UsersController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		//$this->layout="userTask"; 
 		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Invalid user'));
 		}
 		$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
 		$this->set('user', $this->User->find('first', $options));
+		
 	}
 
 /**

@@ -93,34 +93,6 @@
 				</div>
 			</header>
 
-
-
-		
-		<!-- Banner -->
-			<div id="banner-wrapper">
-			
-					<section id="banner">
-					
-					<div id="slideshow">
-					
-						<img src="images/image1.jpg" style="width:100%;height:100%" alt="Slideshow Image 1" class="active" />
-						<img src="images/image2.jpg" style="width:100%;height:100%"  alt="Slideshow Image 2" />
-						<img src="images/image3.jpg" style="width:100%;height:100%"  alt="Slideshow Image 3" />
-						<img src="images/image4.jpg" style="width:100%;height:100%"  alt="Slideshow Image 2" />
-						<img src="images/image5.jpg" style="width:100%;height:100%"  alt="Slideshow Image 3" />
-						<img src="images/image6.jpg" style="width:100%;height:100%"  alt="Slideshow Image 2" />
-						<img src="images/image7.jpg" style="width:100%;height:100%"  alt="Slideshow Image 3" />
-						<img src="images/image8.jpg" style="width:100%;height:100%"  alt="Slideshow Image 2" />
-						<img src="images/image9.jpg" style="width:100%;height:100%"  alt="Slideshow Image 3" />
-
-				<br><br>
-						<h2>Partager</h2>
-						<h2>Rencontrer</h2>
-						<h2>S'évader</h2>
-					</div>
-					</section>
-			</div>
-
 		<!-- Main -->
 			<div id="main-wrapper">
 				<div id="main" class="container">
