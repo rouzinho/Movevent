@@ -16,15 +16,41 @@
 											<h2><?php echo h($user['User']['login']); ?>&nbsp;</h2>
 											<h3><?php echo h($user['User']['age']); ?>&nbsp;ans</h3>
 											<h3><?php echo h($user['User']['city']); ?>&nbsp;</h3>
+											<?php
+												$tab = explode(",", $user['User']['interest']);
+												echo "<h3>";
+												foreach($tab as $hobbie){
+													echo "$hobbie ";
+												}
+												echo "</h3>";
+											?>
 										</header>
 
 									
 										<h2 class="major"><span></span></h2>
 										<section>
 											<h3 style="font-size:30px">Covoiturage </h3>
-											<h1>Marque :          <?php echo h($user['User']['car']); ?>&nbsp;</h1>
-											<h1>Modèle  :          <?php echo h($user['User']['model']); ?>&nbsp;</h1>
-											<h1>Catégorie  :         <?php echo h($user['User']['type']); ?>&nbsp;</h1>
+											<?php
+												if( $user['User']['carpool'] == 1){
+													echo "<h1>Marque :          ".h($user['User']['car'])."</h1>";
+													echo "<h1>Modèle  :          ".h($user['User']['model'])."</h1>";
+													echo "<h1>Catégorie  :         ".h($user['User']['type'])."</h1>";
+													if( $user['User']['animal'] == 1){
+														
+													}else{
+													
+													}
+													if($user['User']['carpool'] == 1){
+													
+													}else{
+													
+													}
+												}else{
+													echo "<h1>Aucun covoiturage</h1>";
+												}
+											
+											?>
+											
 											<?php
 												if($user['User']['num_place'] > 0){
 													echo "<h1 class='icon fa-child'  style='font-size:20px; text-align:left;' > ".h($user['User']['num_place'])." places</h1>";
@@ -33,17 +59,28 @@
 											<?php
 												if($user['User']['smoker'] == 1){
 													echo "<h1 class='fa fa-soundcloud'  style='font-size:20px; text-align:left;' >&nbsp;</h1>";
+												}else{
+														//AJOUT ICONE BARRER
 												}
 											?>	
 											<?php
 													if($user['User']['animal'] == 1){
 														echo "<h1 class='fa fa-github-alt'  style='font-size:20px; text-align:left;' >&nbsp;</h1>";
+													}else{
+															//AJOUT ICONE BARRER
+													}
+											?>
+											<?php
+													if($user['User']['baggage'] == 1){
+														echo "<h1 class='fa fa-suitcase fa-stack-1x'  style='font-size:20px; text-align:left;' >&nbsp;</h1>";
+													}else{
+															//AJOUT ICONE BARRER
 													}
 											?>
 										</section>
 										<h2 class="major"><span></span></h2>
 										<section>
-											<h3>Couchsurfing</h3>
+											<h3 style="font-size:30px">Couchsurfing</h3>
 											<?php 
 												if($user['User']['lodge'] == 1){
 													echo "<h1 class='icon fa-bed'   >  loge des personnes</h1>";
