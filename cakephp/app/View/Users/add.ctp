@@ -1,8 +1,8 @@
 <div class="users form">
-<?php echo $this->Html->css('user'); ?>
+<?php echo $this->Html->css(array('skel','style','style-desktop'));?>
 <?php echo $this->Form->create('User'); ?>
 	<fieldset>
-		<legend><?php echo __('Add User'); ?></legend>
+		<legend><?php echo __('Inscription'); ?></legend>
 	<?php
 		echo $this->Form->input('login');
 		echo $this->Form->input('password');
@@ -27,6 +27,7 @@
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
+<!--
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
@@ -34,3 +35,4 @@
 		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
 	</ul>
 </div>
+-->
