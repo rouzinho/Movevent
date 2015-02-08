@@ -77,9 +77,10 @@
 					
 					<br>
 
-					<?php echo $this->Html->link(__('Inscription'), array('controller' => 'users', 'action' => 'add')); ?>    
+					 
 
 					<a href="#" class="button">Connexion</a>
+					<?php echo $this->Html->link(__('Inscription'), array('controller' => 'users', 'action' => 'add')); ?>   
 					</center>
 				</div>
 			</div>

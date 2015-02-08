@@ -21,6 +21,7 @@ class CarpoolsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->layout="headerfooterwithoutconnect"; 
 		$this->Carpool->recursive = 0;
 		$this->set('carpools', $this->Paginator->paginate());
 	}

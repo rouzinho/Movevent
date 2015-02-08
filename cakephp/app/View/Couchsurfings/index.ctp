@@ -1,36 +1,23 @@
+
 <div class="couchsurfings index">
-	<h2><?php echo __('Couchsurfings'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
-	<thead>
-	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('event_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('date'); ?></th>
-			<th><?php echo $this->Paginator->sort('num_place'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	</thead>
-	<tbody>
+	<h2><?php echo __('Liste des Couchsurfings'); ?></h2>
+	
 	<?php foreach ($couchsurfings as $couchsurfing): ?>
-	<tr>
-		<td><?php echo h($couchsurfing['Couchsurfing']['id']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($couchsurfing['User']['id'], array('controller' => 'users', 'action' => 'view', $couchsurfing['User']['id'])); ?>
-		</td>
-		<td>
-			<?php echo $this->Html->link($couchsurfing['Event']['name'], array('controller' => 'events', 'action' => 'view', $couchsurfing['Event']['id'])); ?>
-		</td>
-		<td><?php echo h($couchsurfing['Couchsurfing']['date']); ?>&nbsp;</td>
-		<td><?php echo h($couchsurfing['Couchsurfing']['num_place']); ?>&nbsp;</td>
-		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $couchsurfing['Couchsurfing']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $couchsurfing['Couchsurfing']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $couchsurfing['Couchsurfing']['id']), array(), __('Are you sure you want to delete # %s?', $couchsurfing['Couchsurfing']['id'])); ?>
-		</td>
-	</tr>
+		<section>
+			<ul class="meta" style="font-size:30px;">
+				<li> <?php echo $this->Html->link($couchsurfing['Event']['name'], array('controller' => 'events', 'action' => 'view', $couchsurfing['Event']['id'])); ?> </li>                  
+				<li> <?php echo $this->Html->link($couchsurfing['User']['login'], array('controller' => 'users', 'action' => 'view', $couchsurfing['User']['id'])); ?> </li>
+				
+				<li class="icon fa-clock-o" style="font-size:20px;"  align="rigth"  > <td><?php echo h($couchsurfing['Couchsurfing']['date']); ?>&nbsp;</li>						 
+				<li class="icon fa-child"  style="font-size:20px; text-align:center;" >   <?php echo h($couchsurfing['Couchsurfing']['num_place']); ?>&nbsp; places</li> 
+				<?php ?>
+			</ul>
+		</section>>
 <?php endforeach; ?>
-	</tbody>
+	
+	
+	
+	<!--</tbody>
 	</table>
 	<p>
 	<?php
@@ -56,3 +43,4 @@
 		<li><?php echo $this->Html->link(__('New Event'), array('controller' => 'events', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
+-->

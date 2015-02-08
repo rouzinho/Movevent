@@ -21,6 +21,7 @@ class CouchsurfingsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->layout="headerfooterwithoutconnect"; 
 		$this->Couchsurfing->recursive = 0;
 		$this->set('couchsurfings', $this->Paginator->paginate());
 	}
