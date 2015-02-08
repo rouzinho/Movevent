@@ -45,6 +45,7 @@ class UsersController extends AppController {
 	public function view($id = null) {
 		$this->layout="headerfooterwithconnect"; 
 		if (!$this->User->exists($id)) {
+			return $this->redirect(array('action' => 'index'));
 			throw new NotFoundException(__('Invalid user'));
 		}
 		$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
@@ -80,6 +81,7 @@ class UsersController extends AppController {
 	public function edit($id = null) {
 		$this->layout="headerfooterwithoutconnect"; 
 		if (!$this->User->exists($id)) {
+			return $this->redirect(array('action' => 'index'));
 			throw new NotFoundException(__('Invalid user'));
 		}
 		if ($this->request->is(array('post', 'put'))) {

@@ -36,6 +36,7 @@ class EventsController extends AppController {
 	public function view($id = null) {
 		$this->layout="recherche";
 		if (!$this->Event->exists($id)) {
+			return $this->redirect(array('action' => 'index'));
 			throw new NotFoundException(__('Invalid event'));
 		}
 		$options = array('conditions' => array('Event.' . $this->Event->primaryKey => $id));
@@ -69,6 +70,7 @@ class EventsController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->Event->exists($id)) {
+			return $this->redirect(array('action' => 'index'));
 			throw new NotFoundException(__('Invalid event'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
