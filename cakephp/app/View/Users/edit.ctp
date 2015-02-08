@@ -6,8 +6,23 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('login');
 		echo $this->Form->input('password');
-		echo $this->Form->input('information_user_id');
-		echo $this->Form->input('service_user_id');
+		echo $this->Form->input('first_name');
+		echo $this->Form->input('last_name');
+		echo $this->Form->input('age');
+		echo $this->Form->input('mail');
+		echo $this->Form->input('adress');
+		echo $this->Form->input('city');
+		echo $this->Form->input('carpool');
+		echo $this->Form->input('car');
+		echo $this->Form->input('model');
+		echo $this->Form->input('type');
+		echo $this->Form->input('num_place');
+		echo $this->Form->input('smoker');
+		echo $this->Form->input('animal');
+		echo $this->Form->input('baggage');
+		echo $this->Form->input('lodge');
+		echo $this->Form->input('interest');
+		echo $this->Form->input('description');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -18,13 +33,5 @@
 
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('User.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('User.id'))); ?></li>
 		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Information Users'), array('controller' => 'information_users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Information User'), array('controller' => 'information_users', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Service Users'), array('controller' => 'service_users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Service User'), array('controller' => 'service_users', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Carpools'), array('controller' => 'carpools', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Carpool'), array('controller' => 'carpools', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Couchsurfings'), array('controller' => 'couchsurfings', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Couchsurfing'), array('controller' => 'couchsurfings', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
