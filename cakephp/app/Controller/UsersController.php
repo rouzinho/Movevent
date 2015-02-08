@@ -21,7 +21,7 @@ class UsersController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->layout="userTask"; 
+		$this->layout="headerfooterwithoutconnect"; 
 		$this->User->recursive = 0;
 		$this->set('users', $this->Paginator->paginate());
 	}
@@ -48,6 +48,7 @@ class UsersController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->layout="headerfooterwithoutconnect"; 
 		if ($this->request->is('post')) {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
@@ -67,6 +68,7 @@ class UsersController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->layout="headerfooterwithoutconnect"; 
 		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Invalid user'));
 		}
