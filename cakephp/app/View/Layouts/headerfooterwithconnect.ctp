@@ -34,7 +34,7 @@
 							<div class="content">
 										<?php echo $this->Session->flash(); ?>
 											<?php echo $this->fetch('content'); ?>
-										<center><a align="rigth" style="margin:40px;" href="index.html" class="button big" >Retour</a> </center>
+										<center><a align="rigth" style="margin:40px;" href="../" class="button big" >Retour</a> </center>
 							</div>
 						</div>
 					</div>
