@@ -34,6 +34,7 @@ class EventsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->layout="recherche";
 		if (!$this->Event->exists($id)) {
 			throw new NotFoundException(__('Invalid event'));
 		}
@@ -47,6 +48,7 @@ class EventsController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->layout="recherche";
 		if ($this->request->is('post')) {
 			$this->Event->create();
 			if ($this->Event->save($this->request->data)) {
