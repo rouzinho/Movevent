@@ -1,8 +1,7 @@
 <div class="users form">
 <?php echo $this->Html->css(array('skel','style','style-desktop'));?>
 <?php echo $this->Form->create('User'); ?>
-	<fieldset>
-		<legend><?php echo __('Inscription'); ?></legend>
+	<h2>Création d'un compte utilisateur</h2>
 	<?php
 		echo $this->Form->input('login');
 		echo $this->Form->input('password');
@@ -25,7 +24,7 @@
 		echo $this->Form->input('description');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<center><?php echo $this->Form->end(__('Submit')); ?></center>
 </div>
 <!--
 <div class="actions">

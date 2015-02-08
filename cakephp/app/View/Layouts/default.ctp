@@ -77,10 +77,6 @@
 
 					<?php echo $this->Html->link(__('Inscription'), array('controller' => 'users', 'action' => 'add')); ?>    
 
-					<?php echo $this->Html->link(__('Inscription'), array('controller' => 'users', 'action' => 'add')); ?>  
-
-					<?php echo $this->Html->link(__('Inscription'), array('controller' => 'users', 'action' => 'add')); ?>  
-
 					<a href="#" class="button">Connexion</a>
 					</center>
 				</div>
