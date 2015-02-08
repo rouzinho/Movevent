@@ -1,114 +1,170 @@
-<div class="users view">
-<h2><?php echo __('User'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Login'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['login']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Password'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['password']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('First Name'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['first_name']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Last Name'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['last_name']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Age'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['age']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Mail'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['mail']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Adress'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['adress']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('City'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['city']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Carpool'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['carpool']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Car'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['car']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Model'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['model']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Type'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['type']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Num Place'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['num_place']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Smoker'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['smoker']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Animal'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['animal']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Baggage'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['baggage']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Lodge'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['lodge']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Interest'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['interest']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Description'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['description']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+
+<div class="row">
+	<div class="9u important(collapse)">
+		<div class="content content-left">
+		
+			<!-- Content -->
+	
+				<article class="box page-content">
+
+					<div class="users view">
+
+						<table border="1">
+							<tr>
+								<td>
+									<h2><?php echo h($user['User']['login']); ?>&nbsp;</h2>
+								</td>
+								<td rowspan="3"><img src="../../app/webroot/images/profil.jpg" alt="profil" style="width:64px; height:64px;" /> </td>
+								<td>
+								</td>
+								<td>
+									<h1><?php echo h($user['User']['car']); ?>&nbsp;</h1>
+									
+								</td>
+								<td>
+									<h1><?php echo h($user['User']['model']); ?>&nbsp;</h1>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h2><?php echo h($user['User']['age']); ?>&nbsp;ans</h2>
+								</td>
+								<td>
+								</td>
+								<td>
+									<h1><?php echo h($user['User']['type']); ?>&nbsp;</h1>
+								</td>
+								<td>
+									<?php
+										if($user['User']['num_place'] > 0){
+											echo "<h1 class='icon fa-child'  style='font-size:20px; text-align:left;' > ".h($user['User']['num_place'])."places</h1>";
+										}
+									?>
+								
+									</li>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h2><?php echo h($user['User']['city']); ?>&nbsp;</h2>
+								</td>
+								<td>
+								</td>
+								<td>
+									<?php
+										if($user['User']['smoker'] == 1){
+											echo "<h1 class='fa fa-soundcloud'  style='font-size:20px; text-align:left;' >&nbsp;</h1>";
+										}
+									?>			
+								</td>
+								<td>
+									<?php
+										if($user['User']['animal'] == 1){
+											echo "<h1 class='fa fa-github-alt'  style='font-size:20px; text-align:left;' >&nbsp;</h1>";
+										}
+									?>
+									
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<?php 
+										if($user['User']['lodge'] == 1){
+											echo "<h1 class='icon fa-bed'  style='font-size:30px; text-align:left;' ></h1>";
+										}
+									?>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td rowspan="4"><?php echo h($user['User']['description']); ?>&nbsp;
+								</td>
+							</tr>
+
+						</table>
+					</div>
+				</article>
+
+		</div>
+	</div>
+	<div class="3u">
+		<div class="sidebar">
+		
+			<!-- Sidebar -->
+		
+				<!-- Recent Posts -->
+					<section>
+						<h2 ><span>Dernières notifications</span></h2> <br>
+						<ul class="divided">
+							<li>
+								<article class="box post-summary">
+									<h3><a href="#">A Subheading</a></h3>
+									<ul class="meta">
+										<li class="icon fa-clock-o">6 hours ago</li>
+										<li class="icon fa-comments"><a href="#">34</a></li>
+									</ul>
+								</article>
+							</li>
+							<li>
+								<article class="box post-summary">
+									<h3><a href="#">Another Subheading</a></h3>
+									<ul class="meta">
+										<li class="icon fa-clock-o">9 hours ago</li>
+										<li class="icon fa-comments"><a href="#">27</a></li>
+									</ul>
+								</article>
+							</li>
+							<li>
+								<article class="box post-summary">
+									<h3><a href="#">And Another</a></h3>
+									<ul class="meta">
+										<li class="icon fa-clock-o">Yesterday</li>
+										<li class="icon fa-comments"><a href="#">184</a></li>
+									</ul>
+								</article>
+							</li>
+						</ul>
+						<a href="#" class="button alt">Historique</a>
+					</section>
+
+				<!-- Something -->
+					<section>
+						<h3 class="major"><span>évènement proposé</span></h3>
+						<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+						<p>
+							Donec sagittis massa et leo semper scele risque metus faucibus. Morbi congue mattis mi. 
+							Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum sed commodo luctus blandit.
+						</p>
+						<a href="#" class="button alt">En savoir plus</a>
+						
+					</section>
+
+
+		</div>
+	</div>
 </div>
+
+
+
+
+
+
+<!--
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Edit User'), array('action' => 'edit', $user['User']['id'])); ?> </li>
 		<li><?php echo $this->Form->postLink(__('Delete User'), array('action' => 'delete', $user['User']['id']), array(), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('New User'), array('action' => 'atr')); ?> </li>
 	</ul>
 </div>
+-->
