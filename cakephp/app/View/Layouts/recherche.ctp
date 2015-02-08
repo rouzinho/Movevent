@@ -3,21 +3,11 @@
 <html>
 	<head>
 		<title>Result recherch</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
+		
 
 	</head>
+	<?php echo $this->Html->css(array('skel','style','style-desktop'));?>
+	<?php echo $this->Html->script(array('jquery.min','jquery.dropotron.min','skel.min','skel-layers.min','init'));?>
 	<body>
 
 		<!-- Header -->
