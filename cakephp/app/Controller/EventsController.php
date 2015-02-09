@@ -24,6 +24,11 @@ class EventsController extends AppController {
 		$this->layout="recherche";
 		$this->Event->recursive = 0;
 		$this->set('events', $this->Paginator->paginate());
+		$posts = $this->paginate();
+        if ($this->request->is('requested')) {
+            return $posts;
+        }
+        $this->set('posts', $posts);
 	}
 
 /**
@@ -34,9 +39,8 @@ class EventsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
-		$this->layout="eventDisplay";
+		$this->layout="recherche";
 		if (!$this->Event->exists($id)) {
-			return $this->redirect(array('action' => 'index'));
 			throw new NotFoundException(__('Invalid event'));
 		}
 		$options = array('conditions' => array('Event.' . $this->Event->primaryKey => $id));
@@ -70,7 +74,6 @@ class EventsController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->Event->exists($id)) {
-			return $this->redirect(array('action' => 'index'));
 			throw new NotFoundException(__('Invalid event'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
