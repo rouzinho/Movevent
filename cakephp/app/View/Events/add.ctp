@@ -1,7 +1,9 @@
 <div class="events form">
+
+<h2 class="major"><span>Créer un événement</span></h2>
 <?php echo $this->Form->create('Event'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Event'); ?></legend>
+		
 	<?php
 		echo $this->Form->input('name');
 		echo $this->Form->input('theme');
@@ -12,7 +14,8 @@
 		echo $this->Form->input('description');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+	<br> <center >
+<?php echo $this->Form->end(__('Submit')); ?></center>
 </div>
 <!--
 <div class="actions">

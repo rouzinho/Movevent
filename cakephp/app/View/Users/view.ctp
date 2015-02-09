@@ -104,28 +104,19 @@
 						<ul class="divided">
 							<li>
 								<article class="box post-summary">
-									<h3><a href="#">A Subheading</a></h3>
+									<h3><a href="#">Covoiturage accepté</a></h3>
 									<ul class="meta">
-										<li class="icon fa-clock-o">6 hours ago</li>
-										<li class="icon fa-comments"><a href="#">34</a></li>
+										<li class="icon fa-clock-o">Il y a 6 heures</li>
+										<li class="icon fa-comments"><a href="#">1 message</a></li>
 									</ul>
 								</article>
 							</li>
 							<li>
 								<article class="box post-summary">
-									<h3><a href="#">Another Subheading</a></h3>
+									<h3><a href="#">Covoiturage refusé</a></h3>
 									<ul class="meta">
-										<li class="icon fa-clock-o">9 hours ago</li>
-										<li class="icon fa-comments"><a href="#">27</a></li>
-									</ul>
-								</article>
-							</li>
-							<li>
-								<article class="box post-summary">
-									<h3><a href="#">And Another</a></h3>
-									<ul class="meta">
-										<li class="icon fa-clock-o">Yesterday</li>
-										<li class="icon fa-comments"><a href="#">184</a></li>
+										<li class="icon fa-clock-o">Hier</li>
+										<li class="icon fa-comments"><a href="#">1 message</a></li>
 									</ul>
 								</article>
 							</li>

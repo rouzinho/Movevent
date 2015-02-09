@@ -1,3 +1,5 @@
+
+
 <div class="row">
 				<div class="9u important(collapse)">
 							<div class="content content-left">
@@ -16,7 +18,7 @@
 												<?php echo h($event['Event']['description']); ?>
 											</p>
 										</section>
-										<center><a href="#" class="button big">Participer à l'évènement</a>  <a align="rigth" style="margin:40px;" href="index.html" class="button big" >Accueil</a> </center>
+										<center><a href="#" class="button big">Participer à l'évènement</a>  </center>
 									</article>
 
 									
@@ -34,7 +36,7 @@
 														<h2>Route <strong id="km"></strong></h2>
 														<br>
 														<p style=" border-width:2px;  border-style:solid;  border-color:#ff707d;  -moz-border-radius:7px;-webkit-border-radius:7px; border-radius:7px;">
-															mettre liste Covoiturage
+															 liste Covoiturage
 														</p>
 													</section>
 										
@@ -49,15 +51,9 @@
 														<br>
 														<br>
 														<p style=" border-width:2px;  border-style:solid;  border-color:#ff707d;  -moz-border-radius:7px;-webkit-border-radius:7px; border-radius:7px;">
-															mettre liste Couchsurfing
+															 liste Couchsurfing
 														</p>
 													</section>
-										
-											</div>
-											<div class="3u">
-												
-
-										
 											</div>
 										</div>
 										<div class="row">
@@ -72,10 +68,34 @@
 										</div>
 									</div>
 								</section>
-									
-									
-									
 										<script type="text/javascript">
+										var LocsC = [
+														{
+															lat: 45.80,
+															lon: 4.87,
+															title: 'Couchsurfer A',
+															html: ' couchsurfer A',
+															icon: 'http://maps.google.com/mapfiles/markerA.png',
+															show_infowindow: false
+														},
+														{
+														lat: 45.74,
+														lon: 4.90,
+														title: 'Couchsurfer B',
+														html: 'Couchsurfer B',
+														icon: 'http://maps.google.com/mapfiles/markerB.png',
+														show_infowindow: false
+														},
+														{
+														lat: 45.75,
+														lon: 4.85,
+														title: 'Couchsurfer C',
+														html: 'Couchsurfer C',
+														icon: 'http://maps.google.com/mapfiles/markerC.png',
+														show_infowindow: false
+														}
+
+														];
 																var LocsD = [
 														{
 																lat: 48.58,
@@ -103,7 +123,7 @@
 																	$(function() {
 																	
 																			new Maplace({
-																					locations: LocsD,
+																					locations: LocsC,
 																					map_div: '#gmap-circles',
 																					start: 4,
 																					view_all_text: 'Points of interest',
@@ -137,16 +157,47 @@
 
 		</div>
 	</div>
-</div>
 
 
+						<div class="3u">
+							<div class="sidebar">
+							
+								<!-- Sidebar -->
+							
+									<!-- Recent Posts -->
+										<section>
+											<h2 ><span>Information</span></h2> <br>
+											<ul class="divided">
+												<li>
+													<article class="box post-summary">
+														<h3><a href="#">Lieux : </a></h3>
+														<ul class="meta">
+															<li class="icon fa-clock-o"><?php echo h($event['Event']['city']); ?></li>
+														</ul>
+													</article>
+												</li>
+												<li>
+													<article class="box post-summary">
+														<h3><a href="#">Type :</a></h3>
+														<ul class="meta">
+															<li class="icon fa-clock-o"><?php echo h($event['Event']['theme']); ?></li>
+														</ul>
+													</article>
+												</li>
+												<li>
+													<article class="box post-summary">
+														<h3><a href="#">Date :</a></h3>
+														<ul class="meta">
+															<li class="icon fa-clock-o"><?php echo h($event['Event']['start_time']); ?></li>
+															<li class="icon fa-clock-o"><?php echo h($event['Event']['end_time']); ?></li>
+														</ul>
+													</article>
+												</li>
+											</ul>
 
-
-
-
-
-
-
+										</section>
+							</div>
+						</div>
 
 
 
@@ -198,47 +249,7 @@
 	</dl>
 </div>
 
-	</div>
-						</div>
-						<div class="3u">
-							<div class="sidebar">
-							
-								<!-- Sidebar -->
-							
-									<!-- Recent Posts -->
-										<section>
-											<h2 ><span>Information</span></h2> <br>
-											<ul class="divided">
-												<li>
-													<article class="box post-summary">
-														<h3><a href="#">Lieux : </a></h3>
-														<ul class="meta">
-															<li class="icon fa-clock-o"><?php echo h($event['Event']['city']); ?></li>
-														</ul>
-													</article>
-												</li>
-												<li>
-													<article class="box post-summary">
-														<h3><a href="#">Type :</a></h3>
-														<ul class="meta">
-															<li class="icon fa-clock-o"><?php echo h($event['Event']['theme']); ?></li>
-														</ul>
-													</article>
-												</li>
-												<li>
-													<article class="box post-summary">
-														<h3><a href="#">Date :</a></h3>
-														<ul class="meta">
-															<li class="icon fa-clock-o"><?php echo h($event['Event']['start_time']); ?></li>
-															<li class="icon fa-clock-o"><?php echo h($event['Event']['end_time']); ?></li>
-														</ul>
-													</article>
-												</li>
-											</ul>
-
-										</section>
-							
-
+	
 
 
 <!--
