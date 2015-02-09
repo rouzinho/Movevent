@@ -1,3 +1,157 @@
+<div class="row">
+				<div class="9u important(collapse)">
+							<div class="content content-left">
+<!-- Content -->
+						
+									<article class="box page-content">
+
+										<header>
+											<h2>NOM event</h2>
+
+										</header>
+
+										<section>
+											<span class="image featured"><img src="images/pic05.jpg" alt="" /></span>
+											<p>
+												ici mettre descirption
+											</p>
+										</section>
+										<center><a href="#" class="button big">Participer à l'évènement</a>  <a align="rigth" style="margin:40px;" href="index.html" class="button big" >Accueil</a> </center>
+									</article>
+
+									
+										<!-- Features -->
+								<section class="box features">
+									<h2 class="major"><span>Covoiturage & Couchsurfing</span></h2>
+									<div>
+										<div class="row">
+											<div class="6u">
+												
+												<!-- Feature -->
+													<section class="box feature">
+														<h3><a href="#">Covoiturage</a></h3>
+														<div id="gmap-route"    style=" height: 300px; width: 100%; "></div>  
+														<h2>Route <strong id="km"></strong></h2>
+														<br>
+														<p style=" border-width:2px;  border-style:solid;  border-color:#ff707d;  -moz-border-radius:7px;-webkit-border-radius:7px; border-radius:7px;">
+															mettre liste Covoiturage
+														</p>
+													</section>
+										
+											</div>
+											<div class="6u">
+												
+												<!-- Feature -->
+													<section class="box feature">
+													<h3><a href="#">Couchsurfing</a></h3>
+														<div id="gmap-circles"      style=" height: 300px; width: 100%; "   ></div>
+														<h2></h2>
+														<br>
+														<br>
+														<p style=" border-width:2px;  border-style:solid;  border-color:#ff707d;  -moz-border-radius:7px;-webkit-border-radius:7px; border-radius:7px;">
+															mettre liste Couchsurfing
+														</p>
+													</section>
+										
+											</div>
+											<div class="3u">
+												
+
+										
+											</div>
+										</div>
+										<div class="row">
+											<div class="12u">
+												<ul class="actions">
+													<li><a href="#" class="button ">Proposer un <br>covoiturage</a></li>
+													<li><a href="#" class="button alt ">Alerte<br> covoiturage</a></li>
+													<li><a href="#" class="button ">Proposer un <br>couchsurfing</a></li>
+													<li><a href="#" class="button alt ">Alerte <br>couchsurfing</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</section>
+									
+									
+									
+										<script type="text/javascript">
+																var LocsD = [
+														{
+																lat: 48.58,
+																lon: 7.75,
+																title: 'Marché de Noel de Strasbourg',
+																html: 'Différents marché de Noel dans toute la ville de Strasbourg au mois de décembre',
+																icon: 'http://maps.google.com/mapfiles/markerA.png'
+														},
+														{
+														lat: 48.86,
+														lon: 2.33,
+														title: 'Festival Solidays à Paris',
+														html: 'Le festival solidaire Solidays à Paris à la fin du mois de juin',
+														icon: 'http://maps.google.com/mapfiles/markerB.png',
+														},
+														{
+														lat: 45.75,
+														lon: 4.85,
+														title: 'Fête des lumières de Lyon',
+														html: 'Fête des lumières dans toute la ville de lyon le premier week-end de décembre',
+														icon: 'http://maps.google.com/mapfiles/markerC.png',
+														}
+
+														];
+																	$(function() {
+																	
+																			new Maplace({
+																					locations: LocsD,
+																					map_div: '#gmap-circles',
+																					start: 4,
+																					view_all_text: 'Points of interest',
+																					type: 'circle',
+																					shared: {
+																						zoom: 16,
+																						html: '%index'
+																					},
+																					circleRadiusChanged: function(index, point, marker) {
+																					  $('#radiusInfo').text(
+																						' - point #' + (index+1) + ' size: ' + parseInt(marker.getRadius()) + 'mt.'
+																					  );
+																					}
+																				}).Load();
+																			
+																			
+																			new Maplace({
+																			locations: LocsD,
+																			map_div: '#gmap-route',
+																			generate_controls: false,
+																			show_markers: false,
+																			type: 'directions',
+																			draggable: true,
+																			directions_panel: '#route',
+																			afterRoute: function(distance) {
+																				$('#km').text(': '+(distance/1000)+'km');
+																			}
+																		}).Load(); 
+																	});
+													</script>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <div class="events view">
 <h2><?php echo __('Event'); ?></h2>
 	<dl>
@@ -44,8 +198,51 @@
 	</dl>
 </div>
 
-<!--
+	</div>
+						</div>
+						<div class="3u">
+							<div class="sidebar">
+							
+								<!-- Sidebar -->
+							
+									<!-- Recent Posts -->
+										<section>
+											<h2 ><span>Information</span></h2> <br>
+											<ul class="divided">
+												<li>
+													<article class="box post-summary">
+														<h3><a href="#">Lieux : </a></h3>
+														<ul class="meta">
+															<li class="icon fa-clock-o"> ici mettre ville</li>
+														</ul>
+													</article>
+												</li>
+												<li>
+													<article class="box post-summary">
+														<h3><a href="#">Type :</a></h3>
+														<ul class="meta">
+															<li class="icon fa-clock-o">ici mettre type</li>
+														</ul>
+													</article>
+												</li>
+												<li>
+													<article class="box post-summary">
+														<h3><a href="#">Date :</a></h3>
+														<ul class="meta">
+															<li class="icon fa-clock-o">ici mettre date debut</li>
+															<li class="icon fa-clock-o">ici mettre date fin</li>
+														</ul>
+													</article>
+												</li>
+											</ul>
 
+										</section>
+							</div>
+						</div>
+
+
+
+<!--
 <div class="related">
 	<h3><?php echo __('Related Carpools'); ?></h3>
 	<?php if (!empty($event['Carpool'])): ?>

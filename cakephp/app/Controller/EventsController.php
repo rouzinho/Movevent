@@ -34,7 +34,7 @@ class EventsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
-		$this->layout="recherche";
+		$this->layout="eventDisplay";
 		if (!$this->Event->exists($id)) {
 			return $this->redirect(array('action' => 'index'));
 			throw new NotFoundException(__('Invalid event'));
