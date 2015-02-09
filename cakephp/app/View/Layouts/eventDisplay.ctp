@@ -6,19 +6,10 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<script src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.7"></script>
-		<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
-		<script src="js/maplace.min.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
+		<?php echo $this->Html->css(array('skel','style','style-desktop'));?>
+		<?php echo $this->Html->script(array('jquery.min','jquery.dropotron.min','skel.min','skel-layers.min','init'));?>
+		<?php echo $this->Html->script(array('http://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.7','http://code.jquery.com/jquery-1.9.0.min.js','maplace.min.js'));?>
+		<?php echo $this->Html->css(array('skel','style','style-desktop'));?>
 	</head>
 	<body>
 

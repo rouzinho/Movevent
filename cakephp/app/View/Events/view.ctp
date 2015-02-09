@@ -6,14 +6,14 @@
 									<article class="box page-content">
 
 										<header>
-											<h2>NOM event</h2>
+											<h2><?php echo h($event['Event']['name']); ?></h2>
 
 										</header>
 
 										<section>
 											<span class="image featured"><img src="images/pic05.jpg" alt="" /></span>
 											<p>
-												ici mettre descirption
+												<?php echo h($event['Event']['description']); ?>
 											</p>
 										</section>
 										<center><a href="#" class="button big">Participer à l'évènement</a>  <a align="rigth" style="margin:40px;" href="index.html" class="button big" >Accueil</a> </center>
@@ -167,7 +167,7 @@
 		</dd>
 		<dt><?php echo __('Theme'); ?></dt>
 		<dd>
-			<?php echo h($event['Event']['theme']); ?>
+			<?php echo h($event['Event']['theme']); ?><?php echo h($event['Event']['theme']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Place'); ?></dt>
@@ -213,7 +213,7 @@
 													<article class="box post-summary">
 														<h3><a href="#">Lieux : </a></h3>
 														<ul class="meta">
-															<li class="icon fa-clock-o"> ici mettre ville</li>
+															<li class="icon fa-clock-o"><?php echo h($event['Event']['city']); ?></li>
 														</ul>
 													</article>
 												</li>
@@ -221,7 +221,7 @@
 													<article class="box post-summary">
 														<h3><a href="#">Type :</a></h3>
 														<ul class="meta">
-															<li class="icon fa-clock-o">ici mettre type</li>
+															<li class="icon fa-clock-o"><?php echo h($event['Event']['theme']); ?></li>
 														</ul>
 													</article>
 												</li>
@@ -229,16 +229,15 @@
 													<article class="box post-summary">
 														<h3><a href="#">Date :</a></h3>
 														<ul class="meta">
-															<li class="icon fa-clock-o">ici mettre date debut</li>
-															<li class="icon fa-clock-o">ici mettre date fin</li>
+															<li class="icon fa-clock-o"><?php echo h($event['Event']['start_time']); ?></li>
+															<li class="icon fa-clock-o"><?php echo h($event['Event']['end_time']); ?></li>
 														</ul>
 													</article>
 												</li>
 											</ul>
 
 										</section>
-							</div>
-						</div>
+							
 
 
 
