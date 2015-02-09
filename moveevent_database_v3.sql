@@ -175,3 +175,9 @@ INSERT INTO `posts` (`id`, `origin_user_id`, `destination_user_id`, `date`, `pos
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+INSERT INTO `events` (`id`, `name`, `theme`, `place`, `city`, `start_time`, `end_time`, `description`) VALUES
+(5, 'Le jardin du michel', 'Festival punk rock', 'Bulligny', 'Bulligny', '2015-06-08', '2015-06-12', 'Le JDM est un événement incontournable dans le paysage Lorrain. Fort de ses 20 000 participants chaques années, c''est l''un des pionniers en matière de fête dans la périphérie de Nancy. Ne loupez pas des groupes comme Alice Cooper, the Hives et Superbus !'),
+(6, 'Concert ACDC', 'Concert', 'Stade de France', 'Paris', '2015-06-15', '2015-06-16', 'Seule et unique date de concert en france ! Venez Écouter ce groupe mythique qui saura déchaîner les passions. 60 000 places disponibles donc pas d''excuses pour ne pas venir.'),
+(7, 'Open Bidouille Camp 54', 'Festival de la bidouille ', 'La source', 'Nancy', '2015-04-05', '2015-04-08', 'L''Open Bidouille Camp est un festival reconnu de la bidouille ! Il a déja lieu partout en France et se déroule pour la première fois en Lorraine. Venez nombreux bricoler des arduinos, assister à des conférences ou fabriquer des machines infernales.');
