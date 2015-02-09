@@ -53,28 +53,22 @@
 											
 											<?php
 												if($user['User']['num_place'] > 0){
-													echo "<h1 class='icon fa-child'  style='font-size:20px; text-align:left;' > ".h($user['User']['num_place'])." places</h1>";
+													echo "<h1 class='icon fa-child'  style='font-size:30px; text-align:left;' > ".h($user['User']['num_place'])." places</h1>";
 												}
 											?>
 											<?php
 												if($user['User']['smoker'] == 1){
-													echo "<h1 class='fa fa-soundcloud'  style='font-size:20px; text-align:left;' >&nbsp;</h1>";
-												}else{
-														//AJOUT ICONE BARRER
+													echo "<h1 class='fa fa-soundcloud'  style='font-size:30px; text-align:left;' >&nbsp;</h1>";
 												}
 											?>	
 											<?php
 													if($user['User']['animal'] == 1){
-														echo "<h1 class='fa fa-github-alt'  style='font-size:20px; text-align:left;' >&nbsp;</h1>";
-													}else{
-															//AJOUT ICONE BARRER
+														echo "<h1 class='fa fa-github-alt'  style='font-size:30px; text-align:left;' >&nbsp;</h1>";
 													}
 											?>
 											<?php
 													if($user['User']['baggage'] == 1){
-														echo "<h1 class='fa fa-suitcase fa-stack-1x'  style='font-size:20px; text-align:left;' >&nbsp;</h1>";
-													}else{
-															//AJOUT ICONE BARRER
+														echo "<h1 class='fa fa-suitcase'  style='font-size:30px; text-align:left;' >&nbsp;</h1>";
 													}
 											?>
 										</section>
@@ -83,7 +77,9 @@
 											<h3 style="font-size:30px">Couchsurfing</h3>
 											<?php 
 												if($user['User']['lodge'] == 1){
-													echo "<h1 class='icon fa-bed'   >  loge des personnes</h1>";
+													echo "<h1 class='icon fa-bed'   >  Loge des personnes</h1>";
+												}else{
+														 echo "<h1> Ne loge aucune personnes</h1>";
 												}
 											?>
 											<p rowspan="4"><?php echo h($user['User']['description']); ?>&nbsp;</p>
