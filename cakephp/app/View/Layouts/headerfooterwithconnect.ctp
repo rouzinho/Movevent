@@ -10,8 +10,9 @@
 	<?php echo $this->Html->script(array('jquery.min','jquery.dropotron.min','skel.min','skel-layers.min','init'));?>
 	<body>
 		<div id="headerButton">
+				<label class="button" for="modalCheck"><?php echo $this->Html->link(__('Modifier profil'), array('controller' => 'users', 'action' => 'edit',$user['User']['id'])); ?></label>
 				<label class="button" for="modalCheck">Deconnexion</label>
-				<?php echo $this->Html->link(__('Modifier profil'), array('controller' => 'users', 'action' => 'edit',$user['User']['id'])); ?>
+				
 			</div>
 		<!-- Header -->
 			<header id="header">
