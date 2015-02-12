@@ -5,6 +5,7 @@
 	<head>
 		<title>Moveevent</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Type" content="html/css; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<script src="js/jquery.min.js"></script>
